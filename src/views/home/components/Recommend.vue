@@ -65,6 +65,9 @@ export default {
         border-bottom: .01rem solid #eee;
         display: flex;
     }
+    li:last-child {
+        border-bottom: none;
+    }
     .mp-like-img {
         width: 2rem;
         height: 2rem;
