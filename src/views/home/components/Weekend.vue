@@ -2,7 +2,7 @@
     <div>
         <h2 class="recommend-sale">周末去哪儿</h2>
         <ul>
-            <li v-for="item in recommendList" :key="item.id">
+            <li v-for="item in weekendList" :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="mp-like-img" :src="item.imgUrl" />
                 </div>
@@ -17,29 +17,11 @@
 <script>
 export default {
     name: 'HomeWeekend',
+    props: {
+        weekendList: Array
+    },
     data() {
-        return {
-            recommendList: [
-                {
-                    id: '0001',
-                    imgUrl: 'http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',
-                    title: '大连圣亚海洋世界大连圣亚海洋世界',
-                    desc: '浪漫大连首站，浪漫的海洋主题公园浪漫的海洋主题公园',
-                },
-                {
-                    id: '0002',
-                    imgUrl: 'http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',
-                    title: '大连圣亚海洋世界大连圣亚海洋世界',
-                    desc: '浪漫大连首站，浪漫的海洋主题公园浪漫的海洋主题公园',
-                },
-                {
-                    id: '0003',
-                    imgUrl: 'http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',
-                    title: '大连圣亚海洋世界大连圣亚海洋世界',
-                    desc: '浪漫大连首站，浪漫的海洋主题公园浪漫的海洋主题公园',
-                }
-            ]
-        }
+        return {}
     }
 }
 </script>

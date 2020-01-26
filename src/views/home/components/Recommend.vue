@@ -10,8 +10,6 @@
                         <p class="recommend-desc signale">{{item.desc}}</p>
                     </div>
                     <div class="price_and_pi">
-                        <span class="recommend-price">￥{{item.price}}元</span>
-                        <span class="recommend-pi">起</span>
                         <button class="item-button">查看详情</button>
                     </div>
                 </div>
@@ -22,32 +20,11 @@
 <script>
 export default {
     name: 'HomeRecommend',
+    props: {
+        recommendList: Array
+    },
     data() {
-        return {
-            recommendList: [
-                {
-                    id: '0001',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-                    title: '大连圣亚海洋世界大连圣亚海洋世界',
-                    desc: '浪漫大连首站，浪漫的海洋主题公园浪漫的海洋主题公园',
-                    price: 99
-                },
-                {
-                    id: '0002',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-                    title: '大连圣亚海洋世界大连圣亚海洋世界',
-                    desc: '浪漫大连首站，浪漫的海洋主题公园浪漫的海洋主题公园',
-                    price: 98
-                },
-                {
-                    id: '0003',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-                    title: '大连圣亚海洋世界大连圣亚海洋世界',
-                    desc: '浪漫大连首站，浪漫的海洋主题公园浪漫的海洋主题公园',
-                    price: 97
-                }
-            ]
-        }
+        return {}
     }
 }
 </script>
