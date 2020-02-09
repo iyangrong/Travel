@@ -1,6 +1,16 @@
 <template>
     <ul class='list'>
-        <li class="item" v-for="(item, key) of cities" :key="key">{{key}}</li>
+        <li 
+            class="item" 
+            v-for="(item, key) of cities" 
+            :key="key"
+            @touchstart="handleTouchStart"
+            @touchmove="handleTouchMove"
+            @touchend="handleTouchEnd"
+            @click="handleLetterClick"
+        >
+            {{key}}
+        </li>
     </ul>
 </template>
 <script>
@@ -8,6 +18,25 @@ export default {
     name: 'CityAlphabet',
     props: {
         cities: Object
+    },
+    data() {
+        return {
+            touchStatus: false
+        }
+    },
+    methods: {
+        handleLetterClick(e) {
+            this.$emit('change', e.target.innerText)
+        },
+        handleTouchStart() {
+            this.touchStatus = true
+        },
+        handleTouchMove() {
+
+        },
+        handleTouchEnd() {
+            this.touchStatus = false
+        }
     }
 }
 </script>
